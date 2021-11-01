@@ -3,7 +3,7 @@
 -> Feign = Captura os WebServices para fazer a chamada aos microservices específicos.
 
 -> Ribbon = Balanceador de Carga, faz com que um microservice possa se comunicar com varias instancias de outros microservices,
-evitano assim a sobrecarga de uma instância de um determinado microservice.
+evitando assim a sobrecarga de uma instância de um determinado microservice.
 
 -> Eureka Server = Representa o nosso servidor Eureka
 
