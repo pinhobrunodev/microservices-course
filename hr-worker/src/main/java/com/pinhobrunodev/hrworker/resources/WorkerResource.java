@@ -21,6 +21,12 @@ public class WorkerResource {
     @Autowired
     private WorkerService service;
 
+    @GetMapping(value = "/configs")
+    public ResponseEntity<Void> getConfigs() {
+        service.getConfigs();
+        return ResponseEntity.noContent().build();
+    }
+
     @GetMapping
     public ResponseEntity<List<WorkerDTO>> findAll() {
         return ResponseEntity.ok().body(service.findAll());

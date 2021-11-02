@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -16,6 +17,9 @@ import com.pinhobrunodev.hrworker.repositories.WorkerRepository;
 @Service
 public class WorkerService {
 
+	@Value("${test.config}")
+	private String testConfig;
+
 	@Autowired
 	private WorkerRepository repository;
 	
@@ -24,7 +28,13 @@ public class WorkerService {
 	// Captura informacoes do contexto da aplicacao
 	@Autowired
 	private Environment env;
-	
+
+
+	@Transactional(readOnly = true)
+	public void getConfigs(){
+		logger.info("CONFIG = "+ testConfig);
+	}
+
 
 	@Transactional(readOnly = true)
 	public List<WorkerDTO> findAll() {
