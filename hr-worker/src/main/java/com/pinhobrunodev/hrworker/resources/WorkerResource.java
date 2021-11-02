@@ -28,14 +28,14 @@ public class WorkerResource {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<WorkerDTO> findById(@PathVariable Long id) {
-        return ResponseEntity.ok().body(service.findById(id));
-        /* Sempre que chamar um worker pelo findById vai esperar 3s pra responder a req
-        Porem tempo de 3s Vai estourar o Timeout , ja que o balanceamento de Carga com Ribbon = 1s
+
+       //Sempre que chamar um worker pelo findById vai esperar 3s pra responder a req
+       // Porem tempo de 3s Vai estourar o Timeout , ja que o balanceamento de Carga com Ribbon = 1s
         try {
-            Thread.sleep(3000L);
+           Thread.sleep(3000L);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }*/
-
+        }
+        return ResponseEntity.ok().body(service.findById(id));
     }
 }
