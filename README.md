@@ -1,6 +1,23 @@
-# microservices-course
 
--> Feign = Captura os WebServices para fazer a chamada aos microservices específicos.
+# Sistema referente a área de Recursos Humanos de uma Empresa que contém seus próprios microserviços.
+
+## Modelagem Conceitual 
+
+![Modelagem Conceitual](https://user-images.githubusercontent.com/60756219/140233920-62544c32-c14f-438d-8ebb-547126ddeec5.png)
+
+## Arquitetura do Microsservice
+
+![Microsservice img](https://user-images.githubusercontent.com/60756219/140233956-c2ffd748-b356-4182-8b59-7d62fdd0b84e.png)
+
+## Disposição dos Containers Docker
+
+![Containers Docker](https://user-images.githubusercontent.com/60756219/140233969-4359cd37-aace-46dc-8a50-19743c9f4e80.png)
+
+#
+
+## Informações Técnicas
+
+-> FeignClient = Captura os WebServices para fazer a chamada aos microservices específicos.
 
 -> Ribbon = Balanceador de Carga, faz com que um microservice possa se comunicar com varias instancias de outros microservices,
 evitando assim a sobrecarga de uma instância de um determinado microservice.
@@ -21,8 +38,14 @@ evitando assim a sobrecarga de uma instância de um determinado microservice.
 de um microservice, se passar de 10s , ativamos o caminho alternativo. 
 
 
+-> API Gateway Zuul
+
+- O Mundo externo vai realizar as requisições a partir deste Gateway.
+- Sua principal funcionalidade é rotear as chamadas pelo menos dos microserviços com seus endpoints correspondentes.
+
+
 -> Config Server
--  Local onde colocamos nossas configurações da aplicação
+-  Local onde colocamos nossas configurações da aplicação.
 -  No caso desse projeto, está em um repositório privado, ou seja , quando subirmos  no Docker  um microserviço que é um "client" do Config Server ele vai "ler"
 o arquivo de configuração do repositório privado com base no tipo de perfil que está setado no arquivo "bootstrap.properties"
 
