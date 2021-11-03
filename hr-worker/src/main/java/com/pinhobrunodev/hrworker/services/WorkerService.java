@@ -17,8 +17,6 @@ import com.pinhobrunodev.hrworker.repositories.WorkerRepository;
 @Service
 public class WorkerService {
 
-	@Value("${test.config}")
-	private String testConfig;
 
 	@Autowired
 	private WorkerRepository repository;
@@ -31,9 +29,9 @@ public class WorkerService {
 
 
 
-	public void getConfigs(){
+	/*public void getConfigs(){
 		logger.info("CONFIG = "+ testConfig);
-	}
+	}*/
 
 
 	@Transactional(readOnly = true)
