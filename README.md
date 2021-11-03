@@ -37,6 +37,9 @@ evitando assim a sobrecarga de uma instância de um determinado microservice.
 - Podemos colocar um valor de time-out para a requisição , ou seja , vamos tentar acessar um determinado serviço
 de um microservice, se passar de 10s , ativamos o caminho alternativo. 
 
+-> OAuth e JWT
+
+- Utilizado para autenticação e autorização
 
 -> API Gateway Zuul
 
