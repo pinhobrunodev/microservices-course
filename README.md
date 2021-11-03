@@ -19,3 +19,10 @@ evitando assim a sobrecarga de uma instância de um determinado microservice.
  determinamos um  caminho alternativo que não dependa do seviço do microservice que está fora do ar.
 - Podemos colocar um valor de time-out para a requisição , ou seja , vamos tentar acessar um determinado serviço
 de um microservice, se passar de 10s , ativamos o caminho alternativo. 
+
+
+-> Config Server
+-  Local onde colocamos nossas configurações da aplicação
+-  No caso desse projeto, está em um repositório privado, ou seja , quando subirmos  no Docker  um microserviço que é um "client" do Config Server ele vai "ler"
+o arquivo de configuração do repositório privado com base no tipo de perfil que está setado no arquivo "bootstrap.properties"
+
