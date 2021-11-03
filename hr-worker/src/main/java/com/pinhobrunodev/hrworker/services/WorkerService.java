@@ -30,7 +30,7 @@ public class WorkerService {
 	private Environment env;
 
 
-	@Transactional(readOnly = true)
+
 	public void getConfigs(){
 		logger.info("CONFIG = "+ testConfig);
 	}
