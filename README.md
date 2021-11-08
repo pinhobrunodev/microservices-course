@@ -1,6 +1,8 @@
 
 # Sistema referente a área de Recursos Humanos de uma Empresa que contém seus próprios microserviços.
 
+OBS : <code> Spring Boot 2.3.X </code>
+
 ## Modelagem Conceitual 
 
 ![Modelagem Conceitual](https://user-images.githubusercontent.com/60756219/140233920-62544c32-c14f-438d-8ebb-547126ddeec5.png)
